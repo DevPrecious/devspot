@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+        {% block content %}
+        {% for post in posts %}
+            <title>{{ post.title }}</title>
+</head>
+<body>
+    <div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+    <div class="w3-card-4 w3-margin w3-white">
+<p><img src="{{post.image.url}}" width="100%"/></p>
+</div>
+<p>{{ post.content }}</p>
+<small>{{ post.author }} | {{ post.pub_date }}</small> 
+{% endfor %}
+{% endblock %}
+<hr>
+
+<h3></h3><!-- Start BawkBox Code--><script data-sil-id="5ece653359549f00126703af">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/chatroom/5ece653359549f00126703af?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-chatroom sil-widget" id="sil-widget-5ece653359549f00126703af"><a href="//bawkbox.com/install/chatroom">Public Chatroom</a></div><!-- End BawkBox Code-->
+
+</html>
