@@ -3,7 +3,7 @@ from PIL import Image
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=300)
     content = models.TextField()
     pub_date = models.DateTimeField('Date Published')
     slug = models.SlugField(max_length=200, default='How to code')
