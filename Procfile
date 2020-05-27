@@ -1,1 +1,1 @@
-web: gunicorn devspot.wsgi
+web: gunicorn blog.wsgi
